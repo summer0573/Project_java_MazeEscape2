@@ -26,7 +26,7 @@ public class BackgroundPlayerService5 implements Runnable {
 	public BackgroundPlayerService5(Player5 player) {
 		this.player = player;
 		try {
-			image = ImageIO.read(new File("./image/asdf1.png"));
+			image = ImageIO.read(new File("./image/maze5-2.png"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -40,10 +40,10 @@ public class BackgroundPlayerService5 implements Runnable {
 			public void run() {
 				while (true) {
 					// 색상 확인
-					leftColor = new Color(image.getRGB(player.getX() - 10, player.getY() + 25));
-					rightColor = new Color(image.getRGB(player.getX() + 50, player.getY() + 25));
-					upColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 20));
-					downColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 80));
+					leftColor = new Color(image.getRGB(player.getX(), player.getY() + 5));
+					rightColor = new Color(image.getRGB(player.getX() + 10, player.getY() + 5));
+					upColor = new Color(image.getRGB(player.getX()+5, player.getY()));
+					downColor = new Color(image.getRGB(player.getX() +5, player.getY()+10));
 
 					// 벽에 닿으면 움직임 정지
 					if (leftColor.getRed() == 0 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {

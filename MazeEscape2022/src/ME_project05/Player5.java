@@ -120,7 +120,7 @@ public class Player5 extends JLabel implements Moveable {
 
 		setIcon(player);
 		// setSize(390, 419);
-		setSize(50, 50);
+		setSize(10, 10);
 		setLocation(x, y);
 	}
 

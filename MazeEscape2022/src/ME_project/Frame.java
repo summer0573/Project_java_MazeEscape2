@@ -32,7 +32,7 @@ public class Frame extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf2.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/maze1.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player();

@@ -27,7 +27,7 @@ public class BackgroundPlayerService2 implements Runnable {
 	public BackgroundPlayerService2(Player2 player) {
 		this.player = player;
 		try {
-			image = ImageIO.read(new File("./image/asdf1.png"));
+			image = ImageIO.read(new File("./image/maze2-2.png"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -43,9 +43,9 @@ public class BackgroundPlayerService2 implements Runnable {
 				while (true) {
 					// 색상 확인
 					leftColor = new Color(image.getRGB(player.getX() - 10, player.getY() + 25));
-					rightColor = new Color(image.getRGB(player.getX() + 50, player.getY() + 25));
+					rightColor = new Color(image.getRGB(player.getX() + 45, player.getY() + 25));
 					upColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 20));
-					downColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 80));
+					downColor = new Color(image.getRGB(player.getX() + 25, player.getY() + 70));
 
 					// 벽에 닿으면 움직임 정지
 					if (leftColor.getRed() == 0 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {

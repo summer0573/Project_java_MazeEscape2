@@ -110,8 +110,8 @@ public class Player4 extends JLabel implements Moveable {
 	}
 
 	public void initSetting() {
-		x = 100;
-		y = 640;
+		x = 70;
+		y = 700;
 
 		left = false;
 		right = false;
@@ -120,7 +120,7 @@ public class Player4 extends JLabel implements Moveable {
 
 		setIcon(player);
 		// setSize(390, 419);
-		setSize(50, 50);
+		setSize(15, 15);
 		setLocation(x, y);
 	}
 

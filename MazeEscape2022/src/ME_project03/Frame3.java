@@ -27,7 +27,7 @@ public class Frame3 extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf4.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/maze3.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player3();

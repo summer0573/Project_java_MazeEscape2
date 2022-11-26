@@ -27,7 +27,7 @@ public class Frame5 extends JFrame {
 	}
 
 	public void initObject() {
-		backgroundMap = new JLabel(new ImageIcon("./image/asdf6.png"));
+		backgroundMap = new JLabel(new ImageIcon("./image/maze5.png"));
 		setContentPane(backgroundMap);
 
 		player = new Player5();
