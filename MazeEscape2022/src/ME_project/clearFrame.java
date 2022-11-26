@@ -18,7 +18,7 @@ import ME_project02.Frame2;
 
 public class clearFrame extends JFrame {
 	ImageIcon continueBtn = new ImageIcon("./Image/next.png");
-	Image clearImg = new ImageIcon("./Image/clear.png").getImage();
+	Image clearImg = new ImageIcon("./Image/stageclear.png").getImage();
 	Frame F;
 	Frame2 F2;
 
@@ -33,8 +33,10 @@ public class clearFrame extends JFrame {
 		JButton IntBtn = new JButton(continueBtn);
 		setSize(1500, 850); // 창 크기 설정
 		IntBtn.setBorderPainted(false); // 버튼 테두리 설정해제
+		IntBtn.setContentAreaFilled(false);
+		IntBtn.setFocusPainted(false);
 		IntBtn.setPreferredSize(new Dimension(300, 50)); // 버튼 크기 지정
-		IntBtn.setBounds(500, 500, 400, 150);
+		IntBtn.setBounds(570, 516, 330, 140);
 		add(IntBtn);
 		add(Jpanel);
 		setLocationRelativeTo(null);
@@ -53,7 +55,7 @@ public class clearFrame extends JFrame {
 	}
 
 	public void paint(Graphics g) {
-		g.drawImage(clearImg, 430, 50, null);// background를 그려줌
+		g.drawImage(clearImg, 9, 32, null);// background를 그려줌
 	}
 
 	public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package ME_project;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -15,21 +16,29 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 public class Intro extends JFrame {
+	Image logo = new ImageIcon("./Image/background.png").getImage();
 	ImageIcon btnImg = new ImageIcon("./Image/start.png");
-	Image logo = new ImageIcon("./Image/logo.png").getImage();
+	
+	JLabel background;
 
 	public Intro() {
 		setTitle("Maze Escape"); // 타이틀
 		JPanel Jpanel = new JPanel();
 		JButton IntBtn = new JButton(btnImg);
 		setSize(1500, 850); // 창 크기 설정
+		setBackground(Color.WHITE);
 		IntBtn.setBorderPainted(false); // 버튼 테두리 설정해제
-		IntBtn.setPreferredSize(new Dimension(300, 50)); // 버튼 크기 지정
-		IntBtn.setBounds(500, 500, 400, 150);
+		IntBtn.setContentAreaFilled(false);
+		IntBtn.setFocusPainted(false);
+		IntBtn.setPreferredSize(new Dimension(403, 187)); // 버튼 크기 지정
+		IntBtn.setBounds(570, 516, 330, 140);
 		add(IntBtn);
 		add(Jpanel);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		
+		//initObject();
+		
 		setVisible(true);
 
 		IntBtn.addActionListener(new ActionListener() {
@@ -41,9 +50,16 @@ public class Intro extends JFrame {
 			}
 		});
 	}
+	
+	public void initObject() {
+		background = new JLabel(new ImageIcon("./image/background.png"));
+		setContentPane(background);
+
+	}
+
 
 	public void paint(Graphics g) {
-		g.drawImage(logo, 430, 100, null);// background를 그려줌
+		g.drawImage(logo, 9, 32, null);// background를 그려줌
 	}
 
 	public static void main(String[] args) {
