@@ -18,8 +18,6 @@ import javax.swing.WindowConstants;
 public class Intro extends JFrame {
 	Image logo = new ImageIcon("./Image/background.png").getImage();
 	ImageIcon btnImg = new ImageIcon("./Image/start.png");
-	
-	JLabel background;
 
 	public Intro() {
 		setTitle("Maze Escape"); // 타이틀
@@ -36,13 +34,9 @@ public class Intro extends JFrame {
 		add(Jpanel);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		
-		//initObject();
-		
 		setVisible(true);
 
 		IntBtn.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new Frame();
@@ -51,12 +45,6 @@ public class Intro extends JFrame {
 		});
 	}
 	
-	public void initObject() {
-		background = new JLabel(new ImageIcon("./image/background.png"));
-		setContentPane(background);
-
-	}
-
 
 	public void paint(Graphics g) {
 		g.drawImage(logo, 9, 32, null);// background를 그려줌

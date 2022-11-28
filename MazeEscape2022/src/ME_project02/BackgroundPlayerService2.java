@@ -103,7 +103,7 @@ public class BackgroundPlayerService2 implements Runnable {
 
 					try {
 						Thread.sleep(1000);
-						System.out.println(stage2Time++);
+						//System.out.println(stage2Time++);
 
 					} catch (Exception e) {
 						e.printStackTrace();

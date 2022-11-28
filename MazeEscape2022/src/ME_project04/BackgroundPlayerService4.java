@@ -40,10 +40,10 @@ public class BackgroundPlayerService4 implements Runnable {
 			public void run() {
 				while (true) {
 					// 색상 확인
-					leftColor = new Color(image.getRGB(player.getX() - 5, player.getY() + 8));
-					rightColor = new Color(image.getRGB(player.getX() + 20, player.getY() + 8));
-					upColor = new Color(image.getRGB(player.getX() + 8, player.getY() + 20));
-					downColor = new Color(image.getRGB(player.getX() + 8, player.getY() + 35));
+					leftColor = new Color(image.getRGB(player.getX(), player.getY()+8));
+					rightColor = new Color(image.getRGB(player.getX()+15, player.getY()+8));
+					upColor = new Color(image.getRGB(player.getX()+8, player.getY()+10));
+					downColor = new Color(image.getRGB(player.getX()+8, player.getY()+45));
 
 					// 벽에 닿으면 움직임 정지
 					if (leftColor.getRed() == 0 && leftColor.getGreen() == 0 && leftColor.getBlue() == 0) {
@@ -101,7 +101,7 @@ public class BackgroundPlayerService4 implements Runnable {
 
 					try {
 						Thread.sleep(1000);
-						System.out.println(stage4Time++);
+						//System.out.println(stage4Time++);
 
 					} catch (Exception e) {
 						e.printStackTrace();

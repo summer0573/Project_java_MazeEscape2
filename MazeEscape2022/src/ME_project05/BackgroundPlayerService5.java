@@ -101,7 +101,7 @@ public class BackgroundPlayerService5 implements Runnable {
 
 					try {
 						Thread.sleep(1000);
-						System.out.println(stage5Time++);
+						//System.out.println(stage5Time++);
 
 					} catch (Exception e) {
 						e.printStackTrace();
